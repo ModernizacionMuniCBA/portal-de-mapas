@@ -1,0 +1,236 @@
+﻿
+/*=====================================
+GENERAL STYLES
+=====================================*/
+
+body {
+font-family: Verdana;
+}
+
+/*=====================================
+LINK TO TOGGLE MENU
+=====================================*/
+#menu-button {
+    width: 65px;
+    height: 65px;
+    padding: 0;
+    border: 1px solid #D5DEE2;
+    background: #F4F4F4;
+}
+#menu-button:focus {
+  outline: none;
+}
+#menu-button .icon-bar{
+  display: block;
+  width: 45px;
+  margin-left: 7.5px;
+  height: 7px;
+  margin-top: 7.5px;
+  margin-bottom: 7.5px;
+  border-radius: 10px;
+  border: 1px solid #555656;
+  background-color: #555656;
+}
+
+#menu-button.active .icon-bar{
+  border: 1px solid #009162;
+  background-color: #009162;
+}
+
+/*=================================
+NAME OR LOGO OF THE COMPANY
+===============================*/
+.main-name a {
+font-size: 25px!important;
+line-height: 90px;
+background-color: #3C3C3C;
+color: #fff!important;
+}
+
+.main-name a:hover {
+color: #fff!important;
+text-decoration: none;
+}
+
+/*=================================
+MENU WRAPPER
+===============================*/
+
+#menu-wrapper {
+  top:64px;
+margin-left: -250px;
+left: 0;
+width: 250px;
+background: #F4F4F4;
+position: fixed;
+height: 100%;
+overflow-y: auto;
+z-index: 1000;
+transition: all 0.5s ease-in 0s;
+-webkit-transition: all 0.5s ease-in 0s;
+-moz-transition: all 0.5s ease-in 0s;
+-ms-transition: all 0.5s ease-in 0s;
+-o-transition: all 0.5s ease-in 0s;
+border: 1px solid #D5DEE2;
+}
+
+#menu-wrapper.active {
+left: 250px;
+width: 250px;
+transition: all 0.5s ease-out 0s;
+-webkit-transition: all 0.5s ease-out 0s;
+-moz-transition: all 0.5s ease-out 0s;
+-ms-transition: all 0.5s ease-out 0s;
+-o-transition: all 0.5s ease-out 0s;
+}
+
+/*=================================
+NAVIGATION LINKS
+===============================*/
+
+.sidebar-nav {
+position: absolute;
+top: 0;
+width: 100%;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.sidebar-nav li {
+line-height: 50px;
+text-indent: 20px;
+border-bottom: 1px solid #D5DEE2;
+}
+.sidebar-nav li > a:after { float: right; margin-right: 15px; content: '\25BC'; font-size: 0.75em; }
+.sidebar-nav li > a:only-child:after { margin-left: 0; content: ''; }
+
+.sidebar-nav li a{
+display: block;
+text-decoration: none;
+font-size: 12px;
+text-transform: uppercase;
+color: #000;
+}
+
+.sidebar-nav li a:hover, .sidebar-nav li a:focus {
+color: #009162;
+border-bottom: 2px solid #D5DEE2;
+}
+.sidebar-nav li:hover > a:after { float: right; margin-right: 15px; content: '\25B2'; font-size: 0.75em; }
+
+
+
+/* reset our lists to remove bullet points and padding */
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* when hovering over a .mainmenu item,
+  display the submenu inside it.
+  we're changing the submenu's max-height from 0 to 200px;
+*/
+
+.sidebar-nav li:hover .submenu {
+  display: block;
+  max-height: 1000px;
+}
+
+.sidebar-nav li.active-li .submenu {
+  display: block;
+  max-height: 1000px;
+}
+
+/*
+  we now overwrite the background-color for .submenu links only.
+  CSS reads down the page, so code at the bottom will overwrite the code at the top.
+*/
+
+.submenu a {
+  background-color: #999;
+}
+
+/* hover behaviour for links inside .submenu */
+.submenu a:hover {
+  background-color: #666;
+}
+
+/* this is the initial state of all submenus.
+  we set it to max-height: 0, and hide the overflowed content.
+*/
+.submenu {
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: all 0.5s ease-out;
+}
+
+.leaflet-control-layers-toggle{
+  display: none;
+}
+
+
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+	background-color: #F4F4F4;
+	border: 1px solid #000;
+	display: inline-block;
+	position: relative;
+  padding:7.5px;
+  float: right;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+input[type="checkbox"]:checked {
+  -webkit-appearance: none;
+	background-color: #009162;
+	border: 1px solid #009162;
+}
+
+input[type="checkbox"]:checked {
+  -webkit-appearance: none;
+	background-color: #009162;
+	border: 1px solid #009162;
+}
+input[type="checkbox"]:focus{
+  outline: none;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+	background-color: #F4F4F4;
+	border: 1px solid #000;
+	display: inline-block;
+	position: relative;
+  padding:7.5px;
+  float: right;
+  border-radius: 10px;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+input[type="radio"]:checked {
+  -webkit-appearance: none;
+	background-color: #009162;
+	border: 1px solid #009162;
+}
+
+input[type="radio"]:checked {
+  -webkit-appearance: none;
+	background-color: #009162;
+	border: 1px solid #009162;
+}
+input[type="radio"]:focus{
+  outline: none;
+}
+
+
+.menu-item-checkbox{
+  padding-left: 20px;
+}
+.menu-item-checkbox.checkedDiv{
+  background-color: #C3E0D7;
+}
