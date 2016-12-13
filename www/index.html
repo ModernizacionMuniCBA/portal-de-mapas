@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
 
-    <meta http-equiv="Content-Security-Policy"
+    <!-- <meta http-equiv="Content-Security-Policy"
         content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' https://gobiernoabierto.cordoba.gob.ar https://www.google-analytics.com;
                     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
                     media-src *;
                     script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://gobiernoabierto.cordoba.gob.ar https://code.jquery.com;
-                    font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com">
+                    font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com"> -->
 
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
@@ -68,12 +68,29 @@
   			</div><!--/.nav-collapse -->
   	</nav>
   		<!-- MENU SECTION END -->
+    <div class="container-fluid fill">
+      <div class="row">
+      <div class="col-md-12 full-width-div nopadding fill">
+        <div id="map"></div>
+      </div>
+    </div>
+      <script>
 
+        function initMap() {
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 11,
+            center: {lat: 41.876, lng: -87.624}
+          });
 
-    <div class="container">
-	    <div id="event-list">
-		     <div class="row" id="loading"><div class="col-xs-12"><img src="img/loading.gif" height="80px"/></div>
-	    </div>
+          var ctaLayer = new google.maps.KmlLayer({
+            url: 'https://www.google.com/maps/d/kml?mid=1JeoEjxGuDA97ryRorTbjyirDHqU',
+            map: map
+          });
+        }
+      </script>
+      <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsmu6dZuBpoBopfjEHIX4C2uOl18DzGpQ&callback=initMap">
+    </script>
     </div><!-- /.container -->
 
 
