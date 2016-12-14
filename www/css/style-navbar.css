@@ -244,8 +244,19 @@ input[type="radio"]:focus{
   margin-top: 0px;
   border-bottom: 1px solid #D5DEE2;
 }
-.panel-group .panel.panel-mapas:hover{
+
+.panel-group .panel.panel-mapas .panel-heading{
   background-color: #DBEAE5;
+}
+.panel-group .panel.panel-mapas .panel-heading.collapsed{
+  background-color: #F4F4F4;
+}
+.panel-group .panel.panel-mapas .panel-heading.collapsed:hover{
+  background-color: #DBEAE5;
+}
+.panel-heading{
+  border-right: 5px solid #009162;
+  border-radius: 0px;
 }
 .panel-heading{
   border-right: 5px solid #009162;
@@ -278,10 +289,27 @@ input[type="radio"]:focus{
   padding-bottom: 5px;
   padding-top: 5px;
   padding-left: 25px;
+  padding-right: 10px;
 }
+
 .panel-mapas .map-layer-selector:hover{
   background-color: #C3E0D7;
 }
+
+.panel-mapas .map-layer-selector.active{
+  background-color: #009162;
+  border-bottom: 1px solid #D5DEE2;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-left: 25px;
+}
+.panel-mapas .map-layer-selector.active .title{
+  color: #fff;
+}
+.panel-mapas .map-layer-selector.active:hover{
+  background-color: #009162;
+}
+
 
 .panel-mapas .map-layer-selector:last-child{
   border-bottom: none;
@@ -294,17 +322,14 @@ input[type="radio"]:focus{
   margin-bottom: 5px;
   color: #000;
   font-size: 1em;
-}
-.panel-mapas .map-layer-selector .title a{
-  color: #000;
   font-weight: 600;
-  font-size: 1em;
 }
+
 .panel-mapas .map-layer-selector .subtitle{
-  font-size: 1em;
   color:#6D6D6D;
   text-transform: none;
   font-weight: 100;
+  font-size: 0.9em;
 }
 
 .panel-mapas .map-layer-selector h5.subtitle{
@@ -312,7 +337,5 @@ input[type="radio"]:focus{
 }
 
 .panel-mapas .map-layer-selector .subtitle a{
-  font-size: 0.9em;
-  color:#6D6D6D;
-  font-weight: 100;
+
 }

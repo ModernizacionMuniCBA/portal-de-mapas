@@ -64,40 +64,29 @@
               </div>
               <div id="collapseTipo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTipo">
                 <div class="panel-body" id="categories-menu">
-                  <div class="map-layer-selector">
+                  <div class="map-layer-selector" style="cursor: pointer;" onclick="setActiveLayer(this);toggleLayer(0);">
                     <h4 class="title">
-                      <a class="collapsed" role="button" onClick="toggleLayer(0);">
-                        SUBTITULO 1
-                      </a>
+                        Paradas con WiFi
                     </h4>
                     <h5 class="title subtitle">
-                      <a class="collapsed" role="button" onClick="toggleLayer(0);">
-                        Urbanismo, Barrios, Pleaneamiento, Red Vial, Ciclovías, etc.
-                      </a>
+                        Mapa de paradas y refugios de omnibus con WiFi gratis.
+                    </h5>
+                  </div>
+                  <div class="map-layer-selector" style="cursor: pointer;" onclick="setActiveLayer(this);toggleLayer(1);">
+                    <a class="collapsed" role="button" onclick="toggleLayer(1);">
+                      <h4 class="title">
+                        Deporte Social
+                    </h4>
+                    <h5 class="title subtitle">
+                        Mapa interactivo del Deporte Social en la ciudad de Córdoba. Aquí encontrarás todos los Polideportivos, Centros Vecinales y Clubes que poseen convenio con la Dirección de Deporte y Recreación de la Municipalidad de Córdoba.
                     </h5>
                   </div>
                   <div class="map-layer-selector">
                     <h4 class="title">
-                      <a class="collapsed" role="button" onClick="toggleLayer(1);">
-                        SUBTITULO 2
-                      </a>
-                    </h4>
-                    <h5 class="title subtitle">
-                      <a class="collapsed" role="button" onClick="toggleLayer(1);">
-                        Urbanismo, Barrios, Pleaneamiento, Red Vial, Ciclovías, etc.
-                      </a>
-                    </h5>
-                  </div>
-                  <div class="map-layer-selector">
-                    <h4 class="title">
-                      <a class="collapsed" role="button">
                         SUBTITULO 3
-                      </a>
                     </h4>
                     <h5 class="title subtitle">
-                      <a class="collapsed" role="button">
                         Urbanismo, Barrios, Pleaneamiento, Red Vial, Ciclovías, etc.
-                      </a>
                     </h5>
                   </div>
                 </div>
@@ -186,7 +175,7 @@
         function initMap() {
           map = new google.maps.Map(document.getElementById('map'), {
             zoom: 14,
-            center: {lat: -31.419998, lng: -64.189788}
+            center: {lat: -31.420180, lng: -64.188787}
           });
 
           // var ctaLayer = new google.maps.KmlLayer({
@@ -201,6 +190,11 @@
             url: 'https://www.google.com/maps/d/kml?mid=1dtxC8-9Bjj3cYXFl45rFd5f1Q3Q',
             preserveViewport: true
           });
+        }
+
+        function setActiveLayer(obj) {
+          $('.map-layer-selector.active').removeClass('active');
+          $(obj).addClass("active");
         }
 
 
