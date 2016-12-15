@@ -143,6 +143,7 @@
   font-size: 1.5em;
   text-transform: uppercase;
   font-weight: 600;
+  text-align: left;
 }
 @media(max-width:767px){
   .layer-title-header h1{
