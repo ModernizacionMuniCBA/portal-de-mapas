@@ -50,6 +50,7 @@
 		}
 		function toggleLayer(i) {
 			for (var j = 0; j < layers.length; j++) {
+
 				if(layers[j]!=null){
 					if(layers[j].getMap() !== null) {
 						layers[j].setMap(null);

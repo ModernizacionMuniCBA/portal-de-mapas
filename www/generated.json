@@ -53,19 +53,19 @@
           "descripcion": "Servicios municipales",
           "subcategorias": [
             {
-              "id": 7,
+              "id": 6,
               "titulo": "Centros de Salud y Hospitales",
               "descripcion": "",
               "url": "https://www.google.com/maps/d/kml?mid=1vKX3YVLV4u3jLvMu22WqhYjrUzM"
             },
             {
-              "id": 8,
+              "id": 7,
               "titulo": "Escuelas Municipales",
               "descripcion": "",
               "url": "https://www.google.com/maps/d/kml?mid=1QPRDDNpvXc9U_pG8rJhvqudi_VY"
             },
             {
-              "id": 9,
+              "id": 8,
               "titulo": "Jardines Maternales Municipales",
               "descripcion": "",
               "url": "https://www.google.com/maps/d/u/0/kml?mid=1JlujWyGQEc_BLD999LQTLMsPgwY"
