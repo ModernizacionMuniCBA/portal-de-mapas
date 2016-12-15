@@ -311,7 +311,7 @@ input[type="radio"]:focus{
 }
 
 
-.panel-mapas .map-layer-selector:last-child{
+.panel-mapas a:last-child .map-layer-selector{
   border-bottom: none;
   padding-bottom: 15px;
   padding-top: 5px;
