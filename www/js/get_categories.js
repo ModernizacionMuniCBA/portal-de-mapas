@@ -3,12 +3,13 @@
 		var formatJson = "?format=json";
 		var map;
 		var layers = [];
+		var layers_titles = [];
 		function initMap() {
 			map = new google.maps.Map(document.getElementById('map'), {
 				zoom: 14,
 				center: {lat: -31.420180, lng: -64.188787}
 			});
-
+			layers_titles[0]="";
 			layers[0] = new google.maps.KmlLayer({
 				url: '',
 				preserveViewport: true
@@ -30,6 +31,7 @@
 						  url: layer.url,
 						  preserveViewport: true
 						});
+						layers_titles[layer.id] = layer.titulo;
 					});
 					$('#accordion').append('</div></div>');
 			});
@@ -46,15 +48,17 @@
 				}
 			}
 		}
-
 		function toggleLayer(i) {
 			for (var j = 0; j < layers.length; j++) {
-				if(layers[j].getMap() !== null) {
-					layers[j].setMap(null);
+				if(layers[j]!=null){
+					if(layers[j].getMap() !== null) {
+						layers[j].setMap(null);
+					}
 				}
 			}
 			if(layers[i].getMap() === null) {
 				layers[i].setMap(map);
+				$('.header-title').html(layers_titles[i]);
 			}
 		}
 		function setActiveLayer(obj) {

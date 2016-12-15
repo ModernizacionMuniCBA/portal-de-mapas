@@ -154,17 +154,19 @@
   				<span class="icon-bar"></span>
   				<span class="icon-bar"></span>
   			</button>
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> </button>
+        <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> </button> -->
       </div>
       <div class="navbar-header navbar-header-right pull-right">
-
         <a class="navbar-logo" href="index.html">
           <img src="./img/logo-municipalidad.png" class="img-responsive header-logo">
         </a>
       </div>
-  		<div class="navbar-collapse collapse">
+      <div class="layer-title-header hidden-sm hidden-xs">
+        <h1 class="header-title"></h1>
+      </div>
+  		<!-- <div class="navbar-collapse collapse"> -->
   					<!--<form class="form-inline" role="search">-->
-  						<div class="form-group" >
+  						<!-- <div class="form-group" >
   							<div id="cuadroBusqueda" class="input-group input-menu" data-toggle="tooltip"  title="Desplazarse a dirección">
   								<span class="input-group-addon search-icon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
   								<input type="search" id="txtBusqueda" class="form-control" placeholder="Ingrese una dirección"  onkeypress="validarDireccion()"/>
@@ -172,10 +174,17 @@
   									<button id="btnBuscarDireccion" class="btn btn-buscar" type="button" onclick="codeAddress()"><span class="texto">Ir</span></button>
   								</span>
   							</div>
-  						</div>
+  						</div> -->
   					<!--</form>-->
-  			</div><!--/.nav-collapse -->
+  			<!-- </div> -->
   	</nav>
+    <nav class="navbar navbar-default navbar-fixed-bottom hidden-md hidden-lg">
+      <div class="container">
+        <div class="layer-title-header">
+          <h1 class="header-title"></h1>
+        </div>
+      </div>
+    </nav>
   		<!-- MENU SECTION END -->
     <div class="container-fluid fill">
       <div class="row">
@@ -190,21 +199,12 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsmu6dZuBpoBopfjEHIX4C2uOl18DzGpQ"></script>
-    <!-- <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsmu6dZuBpoBopfjEHIX4C2uOl18DzGpQ&callback=initMap">
-  </script> -->
+
     <script src="js/get_categories.js"></script>
     <script>
       initMap();
     </script>
-    <!-- <script src="js/jasny-bootstrap.min.js"></script>
-    <script src="js/dateformat.js"></script>
-    <script src="js/page_size.js"></script>
-    <script src="js/url_spliter.js"></script>
-    <script src="js/get_events.js"></script>
-  	<script src="js/get_groups.js"></script>
-  	<script src="js/h_scroll.js"></script>
-    <script src="js/search_bar.js"></script> -->
+
     <script>
     $(document).click(function(event) {
     		if(!$(event.target).closest('#menu-wrapper').length) {
