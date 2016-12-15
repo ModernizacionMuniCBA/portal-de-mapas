@@ -56,7 +56,7 @@
         {
           "id": 3,
           "titulo": "Titulo 3",
-          "descripcion": "<ReferenceError: descripcion is not defined>",
+          "descripcion": "Establecimientos de gestión Pública y Privada, Universidades e Institutos de formación superior.",
           "subcategorias": [
             {
               "id": 1,
