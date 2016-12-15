@@ -1,77 +1,82 @@
-[
-  {
-    "id": 1,
-    "titulo": "Titulo 1",
-    "descripcion": "Mapas descriptivos de diferentes situaciones de la ciudad.",
-    "subcategorias": [
-      {
-        "id": 1,
-        "titulo": "Paradas con WiFi",
-        "descripcion": "Mapa de paradas y refugios de omnibus con WiFi gratis.",
-        "url": "https://www.google.com/maps/d/kml?mid=1JeoEjxGuDA97ryRorTbjyirDHqU"
-      },
-      {
-        "id": 2,
-        "titulo": "Deporte Social",
-        "descripcion": "Mapa interactivo del Deporte Social en la ciudad de Córdoba. Aquí encontrarás todos los Polideportivos, Centros Vecinales y Clubes que poseen convenio con la Dirección de Deporte y Recreación de la Municipalidad de Córdoba.",
-        "url": "https://www.google.com/maps/d/kml?mid=1dtxC8-9Bjj3cYXFl45rFd5f1Q3Q"
-      },
-      {
-        "id": 3,
-        "titulo": "Subtitulo 3",
-        "descripcion": "Urbanismo, Barrios, Pleaneamiento, Red Vial, Ciclovías, etc.",
-        "url": ""
-      }
-    ]
-  },
-  {
-    "id": 2,
-    "titulo": "Titulo 2",
-    "descripcion": "Urbanismo, Barrios, Pleaneamiento, Red Vial, Ciclovías, etc.",
-    "subcategorias": [
-      {
-        "id": 1,
-        "titulo": "Paradas con WiFi",
-        "descripcion": "Mapa de paradas y refugios de omnibus con WiFi gratis.",
-        "url": "https://www.google.com/maps/d/kml?mid=1JeoEjxGuDA97ryRorTbjyirDHqU"
-      },
-      {
-        "id": 2,
-        "titulo": "Deporte Social",
-        "descripcion": "Mapa interactivo del Deporte Social en la ciudad de Córdoba. Aquí encontrarás todos los Polideportivos, Centros Vecinales y Clubes que poseen convenio con la Dirección de Deporte y Recreación de la Municipalidad de Córdoba.",
-        "url": "https://www.google.com/maps/d/kml?mid=1dtxC8-9Bjj3cYXFl45rFd5f1Q3Q"
-      },
-      {
-        "id": 3,
-        "titulo": "Subtitulo 3",
-        "descripcion": "Urbanismo, Barrios, Pleaneamiento, Red Vial, Ciclovías, etc.",
-        "url": ""
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "titulo": "Titulo 3",
-    "descripcion": "Establecimientos de gestión Pública y Privada, Universidades e Institutos de formación superior.",
-    "subcategorias": [
-      {
-        "id": 1,
-        "titulo": "Paradas con WiFi",
-        "descripcion": "Mapa de paradas y refugios de omnibus con WiFi gratis.",
-        "url": "https://www.google.com/maps/d/kml?mid=1JeoEjxGuDA97ryRorTbjyirDHqU"
-      },
-      {
-        "id": 2,
-        "titulo": "Deporte Social",
-        "descripcion": "Mapa interactivo del Deporte Social en la ciudad de Córdoba. Aquí encontrarás todos los Polideportivos, Centros Vecinales y Clubes que poseen convenio con la Dirección de Deporte y Recreación de la Municipalidad de Córdoba.",
-        "url": "https://www.google.com/maps/d/kml?mid=1dtxC8-9Bjj3cYXFl45rFd5f1Q3Q"
-      },
-      {
-        "id": 3,
-        "titulo": "Subtitulo 3",
-        "descripcion": "Urbanismo, Barrios, Pleaneamiento, Red Vial, Ciclovías, etc.",
-        "url": ""
-      }
-    ]
-  }
-]
+{
+    "count": 4,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+          "id": 1,
+          "titulo": "Titulo 1",
+          "descripcion": "Mapas descriptivos de diferentes situaciones de la ciudad.",
+          "subcategorias": [
+            {
+              "id": 1,
+              "titulo": "Paradas con WiFi",
+              "descripcion": "Mapa de paradas y refugios de omnibus con WiFi gratis.",
+              "url": "https://www.google.com/maps/d/kml?mid=1JeoEjxGuDA97ryRorTbjyirDHqU"
+            },
+            {
+              "id": 2,
+              "titulo": "Deporte Social",
+              "descripcion": "Mapa interactivo del Deporte Social en la ciudad de Córdoba. Aquí encontrarás todos los Polideportivos, Centros Vecinales y Clubes que poseen convenio con la Dirección de Deporte y Recreación de la Municipalidad de Córdoba.",
+              "url": "https://www.google.com/maps/d/kml?mid=1dtxC8-9Bjj3cYXFl45rFd5f1Q3Q"
+            },
+            {
+              "id": 3,
+              "titulo": "Subtitulo 3",
+              "descripcion": "Urbanismo, Barrios, Pleaneamiento, Red Vial, Ciclovías, etc.",
+              "url": ""
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "titulo": "Titulo 2",
+          "descripcion": "Urbanismo, Barrios, Pleaneamiento, Red Vial, Ciclovías, etc.",
+          "subcategorias": [
+            {
+              "id": 1,
+              "titulo": "Paradas con WiFi",
+              "descripcion": "Mapa de paradas y refugios de omnibus con WiFi gratis.",
+              "url": "https://www.google.com/maps/d/kml?mid=1JeoEjxGuDA97ryRorTbjyirDHqU"
+            },
+            {
+              "id": 2,
+              "titulo": "Deporte Social",
+              "descripcion": "Mapa interactivo del Deporte Social en la ciudad de Córdoba. Aquí encontrarás todos los Polideportivos, Centros Vecinales y Clubes que poseen convenio con la Dirección de Deporte y Recreación de la Municipalidad de Córdoba.",
+              "url": "https://www.google.com/maps/d/kml?mid=1dtxC8-9Bjj3cYXFl45rFd5f1Q3Q"
+            },
+            {
+              "id": 3,
+              "titulo": "Subtitulo 3",
+              "descripcion": "Urbanismo, Barrios, Pleaneamiento, Red Vial, Ciclovías, etc.",
+              "url": ""
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "titulo": "Titulo 3",
+          "descripcion": "<ReferenceError: descripcion is not defined>",
+          "subcategorias": [
+            {
+              "id": 1,
+              "titulo": "Paradas con WiFi",
+              "descripcion": "Mapa de paradas y refugios de omnibus con WiFi gratis.",
+              "url": "https://www.google.com/maps/d/kml?mid=1JeoEjxGuDA97ryRorTbjyirDHqU"
+            },
+            {
+              "id": 2,
+              "titulo": "Deporte Social",
+              "descripcion": "Mapa interactivo del Deporte Social en la ciudad de Córdoba. Aquí encontrarás todos los Polideportivos, Centros Vecinales y Clubes que poseen convenio con la Dirección de Deporte y Recreación de la Municipalidad de Córdoba.",
+              "url": "https://www.google.com/maps/d/kml?mid=1dtxC8-9Bjj3cYXFl45rFd5f1Q3Q"
+            },
+            {
+              "id": 3,
+              "titulo": "Subtitulo 3",
+              "descripcion": "Urbanismo, Barrios, Pleaneamiento, Red Vial, Ciclovías, etc.",
+              "url": ""
+            }
+          ]
+        }
+      ]
+}
