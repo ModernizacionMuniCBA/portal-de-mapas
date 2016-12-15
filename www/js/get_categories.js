@@ -17,7 +17,8 @@
 
 		$.ajax({
 			dataType: "json",
-			url: "https://modernizacionmunicba.github.io/portal-de-mapas/www/generated.json",
+			url: "generated.json",
+			// url: "https://modernizacionmunicba.github.io/portal-de-mapas/www/generated.json",
 			success: handleData
 		});
 		function handleData(data) {

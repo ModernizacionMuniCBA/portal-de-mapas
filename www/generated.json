@@ -22,9 +22,9 @@
             },
             {
               "id": 3,
-              "titulo": "Subtitulo 3",
-              "descripcion": "Urbanismo, Barrios, Pleaneamiento, Red Vial, Ciclovías, etc.",
-              "url": ""
+              "titulo": "Obras en Córdoba",
+              "descripcion": "Obras activas en la vía pública",
+              "url": "https://www.google.com/maps/d/kml?mid=1PcNy5ukrcybKmMBD6BdvQ1X3mdE"
             }
           ]
         },
@@ -35,9 +35,9 @@
           "subcategorias": [
             {
               "id": 4,
-              "titulo": "Paradas con WiFi",
-              "descripcion": "Mapa de paradas y refugios de omnibus con WiFi gratis.",
-              "url": "https://www.google.com/maps/d/kml?mid=1JeoEjxGuDA97ryRorTbjyirDHqU"
+              "titulo": "Natatorios y escuelas de verano",
+              "descripcion": "",
+              "url": "https://www.google.com/maps/d/kml?mid=1eWQGRz0WgdAxIzDG9WAiHRdeomQ"
             },
             {
               "id": 5,
