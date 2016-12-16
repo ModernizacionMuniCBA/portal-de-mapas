@@ -29,7 +29,7 @@
 						$('#category-'+category.id+'-menu').append('<a href="#mapa-'+layer.id+'"><div class="map-layer-selector" id="mapa-'+layer.id+'" style="cursor: pointer;" onclick="if(!$(this).hasClass(\'active\')){toggleLayer('+layer.id+');} setActiveLayer(this);"><h4 class="title">'+layer.titulo+'</h4><h5 class="title subtitle">'+layer.descripcion+'</h5></div></a>');
 						layers[layer.id] = new google.maps.KmlLayer({
 						  url: layer.url,
-						  preserveViewport: true
+						  preserveViewport: false
 						});
 						layers_titles[layer.id] = layer.titulo;
 					});
