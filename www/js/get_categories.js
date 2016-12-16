@@ -63,6 +63,7 @@
 			if(layers[i].getMap() === null) {
 				layers[i].setMap(map);
 				$('.header-title').html(layers_titles[i]);
+				touchAnalytics('/portal-de-mapas/www/#mapa-'+i, 'Portal de mapas. MAPA ' + i);
 			}
 		}
 		function setActiveLayer(obj) {
