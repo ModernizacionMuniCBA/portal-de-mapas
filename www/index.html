@@ -109,6 +109,11 @@
     		}
     })
     $(document).ready(function(){
+
+      if(window.mobilecheck()){
+        $('#menu-wrapper').removeClass("active");
+        $('#menu-button').removeClass("active");
+      }
     	$('#modoConsulta').click(function(){
     		modoMapa(1);
     		$(this).parent().addClass('hidden');
