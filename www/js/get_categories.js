@@ -33,9 +33,12 @@
 					$('#accordion').append('<div class="panel panel-mapas"><div class="panel-heading collapsed" role="tab" id="heading-'+category.id+'" data-toggle="collapse" data-parent="#accordion" href="#collapse-'+category.id+'" aria-expanded="false" aria-controls="collapse-'+category.id+'"><h4 class="panel-title"><a class="collapsed" role="button">'+category.titulo+'</a></h4><h5 class="panel-title panel-subtitle"><a class="collapsed" role="button">'+category.descripcion+'</a></h5></div><div id="collapse-'+category.id+'" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-'+category.id+'"><div class="panel-body" id="category-'+category.id+'-menu">');
 					$.each(category.subcategorias, function(j, layer) {
 						$('#category-'+category.id+'-menu').append('<a href="#mapa-'+layer.id+'"><div class="map-layer-selector" id="mapa-'+layer.id+'" style="cursor: pointer;" onclick="if(!$(this).hasClass(\'active\')){toggleLayer('+layer.id+');} setActiveLayer(this);"><h4 class="title">'+layer.titulo+'</h4><h5 class="title subtitle">'+layer.descripcion+'</h5></div></a>');
+						var dd = new Date();
+						var nn = dd.getMinutes();
+					
 						layers[layer.id] = new google.maps.KmlLayer({
-						  url: layer.url,
-						  preserveViewport: true
+						  url: layer.url + "&tm=" + nn,
+						  preserveViewport: false
 						});
 						layers_titles[layer.id] = layer.titulo;
 					});
@@ -65,6 +68,7 @@
 			if(layers[i].getMap() === null) {
 				layers[i].setMap(map);
 				$('.header-title').html(layers_titles[i]);
+				touchAnalytics('/portal-de-mapas/www/#mapa-'+i, 'Portal de mapas. MAPA ' + i);
 			}
 		}
 		function setActiveLayer(obj) {

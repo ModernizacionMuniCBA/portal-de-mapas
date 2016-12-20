@@ -4,6 +4,25 @@
     "previous": null,
     "results": [
         {
+          "id": 2,
+          "titulo": "Obras",
+          "descripcion": "Urbanismo, Barrios, Pleaneamiento, Red Vial, Ciclovías, etc.",
+          "subcategorias": [
+            {
+              "id": 4,
+              "titulo": "Obras en Córdoba",
+              "descripcion": "Obras activas en la vía pública",
+              "url": "https://www.google.com/maps/d/kml?mid=1PcNy5ukrcybKmMBD6BdvQ1X3mdE"
+            },
+            {
+              "id": 5,
+              "titulo": "Obras 2017",
+              "descripcion": "Obras licitadas para 2017 (en proceso de carga)",
+              "url": "https://www.google.com/maps/d/kml?mid=1HmGbDmC9hWdSmwGyzCCdMvKD_Og" 
+            }
+          ]
+        },
+        {
           "id": 1,
           "titulo": "Recreación",
           "descripcion": "Mapas de áreas recreativas",
@@ -29,25 +48,6 @@
           ]
         },
         {
-          "id": 2,
-          "titulo": "Obras",
-          "descripcion": "Urbanismo, Barrios, Pleaneamiento, Red Vial, Ciclovías, etc.",
-          "subcategorias": [
-            {
-              "id": 4,
-              "titulo": "Obras en Córdoba",
-              "descripcion": "Obras activas en la vía pública",
-              "url": "https://www.google.com/maps/d/kml?mid=1PcNy5ukrcybKmMBD6BdvQ1X3mdE"
-            },
-            {
-              "id": 5,
-              "titulo": "Obras 2017",
-              "descripcion": "Obras licitadas para 2017 (en proceso de carga)",
-              "url": "https://www.google.com/maps/d/kml?mid=1HmGbDmC9hWdSmwGyzCCdMvKD_Og"
-            }
-          ]
-        },
-        {
           "id": 3,
           "titulo": "Servicios",
           "descripcion": "Servicios municipales",
@@ -69,6 +69,19 @@
               "titulo": "Jardines Maternales Municipales",
               "descripcion": "",
               "url": "https://www.google.com/maps/d/u/0/kml?mid=1JlujWyGQEc_BLD999LQTLMsPgwY"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "titulo": "Sociedad",
+          "descripcion": "",
+          "subcategorias": [
+            {
+              "id": 9,
+              "titulo": "Culto",
+              "descripcion": "Centros de culto de todas las religiones",
+              "url": "https://www.google.com/maps/d/kml?mid=1TgSpIpJrj3EF_bJecs57Or6VzGc"
             }
           ]
         }
