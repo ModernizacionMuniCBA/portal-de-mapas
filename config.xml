@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="ar.gob.cordoba.gobiernoabierto.portal-de-mapas" version="1.0.109" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Portal de mapas de la Ciudad de Córdoba</name>
+    <description>
+        Capas de datos geográficos de la Ciudad de Córdoba
+    </description>
+    <author email="gobiernoabiertocba@gmail.com" href="https://gobiernoabierto.cordoba.gob.ar/">
+        Secretaría de Modernización de la Ciudad de Córdoba
+    </author>
+    <content src="index.html" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    
+    <platform name="android">
+        <icon src="www/res/icono-64x64.png" density="hdpi" />
+        <splash src="www/res/splash.png" density="land-hdpi"/>
+        <allow-intent href="market:*" />
+
+    </platform>
+    
+</widget>
