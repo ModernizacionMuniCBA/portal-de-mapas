@@ -70,8 +70,7 @@
 		function setActiveLayer(obj) {
 			$('.map-layer-selector.active').removeClass('active');
 			$(obj).addClass("active");
-			if(window.mobilecheck()){
-				$('#menu-wrapper').removeClass("active");
-				$('#menu-button').removeClass("active");
-			}
+			$('#menu-wrapper').removeClass("active");
+			$('#menu-button').removeClass("active");
+			
 		}
