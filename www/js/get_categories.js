@@ -4,9 +4,9 @@
 			return check;
 		};
 
-		var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api";
-		var gobAbiertoAPI_categories = "/tipo-actividad/"
-		var formatJson = "?format=json";
+		var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api/";
+		var gobAbiertoAPI_capas = "capas-de-mapas/?portal_id=1"
+		var formatJson = "&format=json";
 		var map;
 		var layers = [];
 		var layers_titles = [];
@@ -24,26 +24,39 @@
 
 		$.ajax({
 			dataType: "json",
-			url: "generated.json",
+			url: gobAbiertoAPI+gobAbiertoAPI_capas+formatJson,
 			// url: "https://modernizacionmunicba.github.io/portal-de-mapas/www/generated.json",
 			success: handleData
 		});
 		function handleData(data) {
-			$.each(data.results, function(i, category) {
-					$('#accordion').append('<div class="panel panel-mapas"><div class="panel-heading collapsed" role="tab" id="heading-'+category.id+'" data-toggle="collapse" data-parent="#accordion" href="#collapse-'+category.id+'" aria-expanded="false" aria-controls="collapse-'+category.id+'"><h4 class="panel-title"><a class="collapsed" role="button">'+category.titulo+'</a></h4><h5 class="panel-title panel-subtitle"><a class="collapsed" role="button">'+category.descripcion+'</a></h5></div><div id="collapse-'+category.id+'" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-'+category.id+'"><div class="panel-body" id="category-'+category.id+'-menu">');
-					$.each(category.subcategorias, function(j, layer) {
-						$('#category-'+category.id+'-menu').append('<a href="#mapa-'+layer.id+'"><div class="map-layer-selector" id="mapa-'+layer.id+'" style="cursor: pointer;" onclick="if(!$(this).hasClass(\'active\')){toggleLayer('+layer.id+');} setActiveLayer(this);"><h4 class="title">'+layer.titulo+'</h4><h5 class="title subtitle">'+layer.descripcion+'</h5></div></a>');
-						var dd = new Date();
-						var nn = dd.getMinutes();
-					
-						layers[layer.id] = new google.maps.KmlLayer({
-						  url: layer.url + "&tm=" + nn,
-						  preserveViewport: false
-						});
-						layers_titles[layer.id] = layer.titulo;
-					});
-					$('#accordion').append('</div></div>');
+			var categories = [];
+			$.each(data.results, function(i, map) {
+				if (categories.indexOf(map.categoria.id) == -1 ){
+					categories.push(map.categoria.id);
+					$('#accordion').append('<div class="panel panel-mapas"><div class="panel-heading collapsed" role="tab" id="heading-'+map.categoria.id+'" data-toggle="collapse" data-parent="#accordion" href="#collapse-'+map.categoria.id+'" aria-expanded="false" aria-controls="collapse-'+map.categoria.id+'"><h4 class="panel-title"><a class="collapsed" role="button">'+map.categoria.nombre+'</a></h4><h5 class="panel-title panel-subtitle"><a class="collapsed" role="button">'+map.categoria.descripcion+'</a></h5></div><div id="collapse-'+map.categoria.id+'" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-'+map.categoria.id+'"><div class="panel-body" id="category-'+map.categoria.id+'-menu"></div></div>');
+				}
 			});
+			$.each(categories, function(i, category_ID) {
+					$.ajax({
+						dataType: "json",
+						url: gobAbiertoAPI+gobAbiertoAPI_capas+'&categoria_id='+category_ID+''+formatJson,
+						success: handleDataMaps
+					});
+			});
+
+		}
+		function handleDataMaps(data) {
+			$.each(data.results, function(i, map) {
+				$('#category-'+map.categoria.id+'-menu').append('<a href="#mapa-'+map.id+'"><div class="map-layer-selector" id="mapa-'+map.id+'" style="cursor: pointer;" onclick="if(!$(this).hasClass(\'active\')){toggleLayer('+map.id+');} setActiveLayer(this);"><h4 class="title">'+map.titulo+'</h4><h5 class="title subtitle">'+map.descripcion+'</h5></div></a>');
+				var dd = new Date();
+				var nn = dd.getMinutes();
+
+				layers[map.id] = new google.maps.KmlLayer({
+					url: map.recurso.url.replace("viewer","kml") + "&tm=" + nn,
+					preserveViewport: false
+				});
+			});
+			// $('#accordion').append('</div></div>');
 			var url = document.location.toString();
 			if (url.match('#')) {
 				var string = url.split('#')[1];
