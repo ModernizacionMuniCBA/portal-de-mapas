@@ -5,7 +5,7 @@
 		};
 
 		var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api";
-		var gobAbiertoAPI_categories = "/tipo-actividad/"
+		var gobAbiertoAPI_categories = "/tipo-actividad/";
 		var formatJson = "?format=json";
 		var map;
 		var layers = [];
