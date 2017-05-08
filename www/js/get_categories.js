@@ -47,8 +47,9 @@
 						$('#category-'+category.id+'-menu').append(catmenu);
 						var dd = new Date();
 						var nn = dd.getMonth() + "-" + dd.getDay() + "-" + dd.getMinutes();
+						var layer_url = layer.url + "&ts=" + nn;
 						layers[layer.id] = new google.maps.KmlLayer({
-						  url: layer.url + "&ts=" + nn,
+						  url: layer_url,
 						  preserveViewport: true
 						});
 						layers_titles[layer.id] = layer.titulo;
