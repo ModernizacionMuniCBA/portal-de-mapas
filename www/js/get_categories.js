@@ -59,6 +59,11 @@ function handleDataMaps(data) {
 		layers_titles[map.id] = map.titulo;
 	});
 	var url = document.location.toString();
+
+	if (!url.match('#')) {
+		url += '#mapa-6';  // mapa de obras predeterminado 
+	}
+
 	if (url.match('#')) {
 		var string = url.split('#')[1];
 		var type = string.split('-')[0];
