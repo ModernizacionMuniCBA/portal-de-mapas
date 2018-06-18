@@ -52,9 +52,12 @@ function handleDataMaps(data) {
 		var dd = new Date();
 		var nn = dd.getMinutes();
 
-		mapURL = map.recurso.url.replace("viewer","kml") + "&tm=" + nn;
+		mapURL = map.recurso.url.replace("viewer","kml");
 		if (mapURL.startsWith('/')) {
 			mapURL = gobAbiertoURL + mapURL;
+		}
+		else {  // los KML estaticos del portal se rompen con esto
+			 mapURL = mapURL + "&tm=" + nn;
 		}
 		
 		layers[map.id] = new google.maps.KmlLayer({
