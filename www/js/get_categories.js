@@ -4,6 +4,7 @@ window.mobilecheck = function() {
 	return check;
 };
 
+var gobAbiertoURL = "https://gobiernoabierto.cordoba.gob.ar";
 var gobAbiertoAPI = "https://gobiernoabierto.cordoba.gob.ar/api/";
 var gobAbiertoAPI_capas = "capas-de-mapas/?portal_id=1"
 var formatJson = "&format=json";
@@ -51,8 +52,13 @@ function handleDataMaps(data) {
 		var dd = new Date();
 		var nn = dd.getMinutes();
 
+		mapURL = map.recurso.url.replace("viewer","kml") + "&tm=" + nn;
+		if (mapURL.startsWith('/')) {
+			mapURL = gobAbiertoURL + mapURL;
+		}
+		
 		layers[map.id] = new google.maps.KmlLayer({
-			url: map.recurso.url.replace("viewer","kml") + "&tm=" + nn,
+			url: mapURL,
 			preserveViewport: false
 		});
 
