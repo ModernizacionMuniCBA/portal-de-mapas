@@ -33,8 +33,8 @@ LINK TO TOGGLE MENU
 }
 
 #menu-button.active .icon-bar{
-  border: 1px solid #009162;
-  background-color: #009162;
+  border: 1px solid #009EE2;
+  background-color: #009EE2;
 }
 
 /*=================================
@@ -114,7 +114,7 @@ color: #000;
 }
 
 .sidebar-nav li a:hover, .sidebar-nav li a:focus {
-color: #009162;
+color: #009EE2;
 border-bottom: 2px solid #D5DEE2;
 }
 .sidebar-nav li:hover > a:after { float: right; margin-right: 15px; content: '\25B2'; font-size: 0.75em; }
@@ -186,14 +186,14 @@ input[type="checkbox"] {
 
 input[type="checkbox"]:checked {
   -webkit-appearance: none;
-	background-color: #009162;
-	border: 1px solid #009162;
+	background-color: #009EE2;
+	border: 1px solid #009EE2;
 }
 
 input[type="checkbox"]:checked {
   -webkit-appearance: none;
-	background-color: #009162;
-	border: 1px solid #009162;
+	background-color: #009EE2;
+	border: 1px solid #009EE2;
 }
 input[type="checkbox"]:focus{
   outline: none;
@@ -214,14 +214,14 @@ input[type="radio"] {
 
 input[type="radio"]:checked {
   -webkit-appearance: none;
-	background-color: #009162;
-	border: 1px solid #009162;
+	background-color: #009EE2;
+	border: 1px solid #009EE2;
 }
 
 input[type="radio"]:checked {
   -webkit-appearance: none;
-	background-color: #009162;
-	border: 1px solid #009162;
+	background-color: #009EE2;
+	border: 1px solid #009EE2;
 }
 input[type="radio"]:focus{
   outline: none;
@@ -255,11 +255,11 @@ input[type="radio"]:focus{
   background-color: #DBEAE5;
 }
 .panel-heading{
-  border-right: 5px solid #009162;
+  border-right: 5px solid #009EE2;
   border-radius: 0px;
 }
 .panel-heading{
-  border-right: 5px solid #009162;
+  border-right: 5px solid #009EE2;
   border-radius: 0px;
 }
 .panel-title{
@@ -297,7 +297,7 @@ input[type="radio"]:focus{
 }
 
 .panel-mapas .map-layer-selector.active{
-  background-color: #009162;
+  background-color: #009EE2;
   border-bottom: 1px solid #D5DEE2;
   padding-bottom: 5px;
   padding-top: 5px;
@@ -307,7 +307,7 @@ input[type="radio"]:focus{
   color: #fff;
 }
 .panel-mapas .map-layer-selector.active:hover{
-  background-color: #009162;
+  background-color: #009EE2;
 }
 
 
